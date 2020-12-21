@@ -7,6 +7,9 @@ from django.shortcuts import redirect
 # Create your views here.
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    for post in posts:
+        if len(post.text) > 255:
+            post.text = post.text[:255] + '...'
     return render(request, 'bl/post_list.html', {'posts':posts})
 
 def post_detail(request, pk):
