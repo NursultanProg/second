@@ -2,9 +2,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <div class="post">
+    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
     <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.tittle }}</a></h1>
     <div class="date">
         <p>Опубликовано: {{ post.published_date }}</p>
+        <p>Автор: {{ post.author }}</p>
     </div>
     <p>{{ post.text|linebreaksbr }}</p>
 </div>

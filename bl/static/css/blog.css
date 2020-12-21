@@ -28,15 +28,15 @@ h4 {
     color: #828282;
 }
 
-
-}
 .save {
     float: right;
 }
+
 .post-form textarea,
 .post-form input {
     width: 100%;
 }
+
 .top-menu,
 .top-menu:hover,
 .top-menu:visited {
@@ -45,9 +45,11 @@ h4 {
     font-size: 26pt;
     margin-right: 20px;
 }
+
 .post {
     margin-bottom: 70px;
 }
+
 .post h1 a,
 .post h1 a:visited {
     color: #000000;

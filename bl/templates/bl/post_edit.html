@@ -1,0 +1,10 @@
+{% extends 'bl/base.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+<div class="post">
+    <h1>Новый пост</h1>
+    <form method='POST' class="post-form">{% csrf_token %} {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Сохранить</button>
+    </form>
+</div>
+{%endblock%}
